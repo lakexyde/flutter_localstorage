@@ -26,7 +26,6 @@ class LocalStorage {
   Future<File> _internalSaveData() async{
     final file = await _localFile;
     final data = json.encode(localStorageData);
-    print(data);
 
     return file.writeAsString('$data');
 
